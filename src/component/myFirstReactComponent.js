@@ -26,6 +26,27 @@ class WelcomeReact extends React.Component {
         this.setState({dislike: this.state.dislike-1})
     }
 
+    componentWillMount(){
+        console.log("Com will mount")
+    }
+
+    componentDidMount(){
+        console.log("Com did mount")
+    }
+
+    componentWillUpdate(){
+        console.log("Com will be updated")
+    }
+
+    componentDidUpdate(){
+        console.log("Com did update!")
+    }
+
+    componentWillUnmount(){
+        
+    }
+
+
 
     render() { 
         return ( 

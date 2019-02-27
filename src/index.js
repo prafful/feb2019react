@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import  WelcomeReact from "./component/myFirstReactComponent";
 import Review from './review_component/review';
+import Rainbow from './rainbow/rainbow';
 
 
 var location = document.getElementById('myreactroot')
@@ -9,6 +10,11 @@ var reviewLocation = document.getElementById('review')
 
 ReactDOM.render(    <div>
                         <WelcomeReact></WelcomeReact>
+                        <br></br>
+                        <Rainbow fcol="red" bcol="yellow">R</Rainbow>
+                        <Rainbow fcol="yellow" bcol="red">A</Rainbow>
+                        <Rainbow fcol="yellow" bcol="indigo">I</Rainbow>
+                        <Rainbow fcol="blue" bcol="pink">N</Rainbow>
                     </div>
                     , location )
 
