@@ -2,6 +2,7 @@ import React from "react"
 import ReviewTitle from "./review_child_component/reviewTitle";
 import ReviewDescription from "./review_child_component/reviewDescription";
 import ReviewRating from "./review_child_component/reviewRating";
+import ReviewComment from "./review_child_component/reviewComment";
 
 class Review extends React.Component{
 
@@ -25,7 +26,11 @@ class Review extends React.Component{
                             {this.props.like}
                         </ReviewRating>
                     </span>
-                   
+                    <span>
+                        <ReviewComment>
+                            
+                        </ReviewComment>
+                    </span>
                     <hr></hr>
             </div>    
         )

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import  WelcomeReact from "./component/myFirstReactComponent";
 import Review from './review_component/review';
 import Rainbow from './rainbow/rainbow';
+import RemoteData from './remote_data/remoteData';
 
 
 var location = document.getElementById('myreactroot')
@@ -27,3 +28,6 @@ ReactDOM.render(   <div>
 
     
     , reviewLocation)
+
+
+ReactDOM.render(<RemoteData></RemoteData>, document.getElementById('remoteData'))    
