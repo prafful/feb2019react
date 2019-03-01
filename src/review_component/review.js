@@ -6,16 +6,29 @@ import ReviewComment from "./review_child_component/reviewComment";
 
 class Review extends React.Component{
 
+    constructor(props){
+        super(props)
+        this.state = {
+            incComment:parseInt(this.props.noc)
+        }
+        this.incrementComment=this.incrementComment.bind(this)
+    }
+
+    incrementComment = function(){
+        console.log("I am called from child component")
+        this.setState({incComment: this.state.incComment+1})
+    }
+
     render(){
         return (
             <div>
                     <span>
                         <ReviewTitle>
-                            {this.props.children}
+                            {this.props.children} 
                         </ReviewTitle>
                     </span>
                     <span>
-                        <ReviewDescription>
+                        <ReviewDescription totalcomment={this.state.incComment}>
                             {this.props.desc}
                         </ReviewDescription>
                     </span>
@@ -27,8 +40,8 @@ class Review extends React.Component{
                         </ReviewRating>
                     </span>
                     <span>
-                        <ReviewComment>
-                            
+                        <ReviewComment incrementCommentByOne={this.incrementComment}>
+                           
                         </ReviewComment>
                     </span>
                     <hr></hr>

@@ -24,13 +24,18 @@ class ReviewComment extends React.Component {
     postComment(){
         console.log("I will post comment to server...")
         this.setState({postComment: this.state.createComment})
+
+        this.props.incrementCommentByOne()
+
     }
     
     render() { 
         return ( 
             <div>
-                Comment: <input type="text" onChange={this.commentChange}></input>
+                Comment:
+                <input type="text" onChange={this.commentChange}></input>
                 <button onClick={this.postComment}>Add Comment</button>
+               
                 <br></br>
                 {this.state.postComment}
             </div>

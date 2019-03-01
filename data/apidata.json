@@ -1,0 +1,20 @@
+{
+    "comments":[
+                {
+                    "id":1,
+                    "commentText":"Cool product",
+                    "commentlike":10
+                },
+                {
+                    "id":2,
+                    "commentText":"Will buy it again!",
+                    "commentlike":20
+                },
+                {
+                    "id":3,
+                    "commentText":"For premium users only",
+                    "commentlike":5
+                }
+            ]
+
+}

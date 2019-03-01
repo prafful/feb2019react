@@ -17,7 +17,7 @@ class RemoteData extends React.Component {
     }
 
     getRemoteData(){
-        axios.get("https://jsonplaceholder.typicode.com/users")
+        axios.get("http://localhost:3000/comments")
                 .then((mydata)=>{
                     console.log(mydata.data)
                     this.setState({remoteUsers: mydata.data})
@@ -25,13 +25,12 @@ class RemoteData extends React.Component {
     }
 
     renderRemoteData(){
-        return this.state.remoteUsers.map((user)=>{
+        return this.state.remoteUsers.map((comment)=>{
             return (
                 <UserDetailDisplay
-                    key={user.id}
-                    name={user.name}
-                    username={user.username}
-                    email={user.email}
+                    key={comment.id}
+                    ctext={comment.commentText}
+                    clike={comment.commentlike}
                 ></UserDetailDisplay>
             )
         })
@@ -41,8 +40,19 @@ class RemoteData extends React.Component {
         return ( 
             <div>
                 <h2>Data from REST API!!!!</h2>
-                    {this.renderRemoteData()}
-
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Comment Text</th>
+                                <th>Like</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.renderRemoteData()}
+                        </tbody>
+                        
+                    </table>
                     
             </div>
          );

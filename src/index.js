@@ -20,10 +20,10 @@ ReactDOM.render(    <div>
                     , location )
 
 ReactDOM.render(   <div>
-                    <Review desc="Cool gadget for creative people" like="25" dislike="5">Samsung Note 9</Review>
-                    <Review desc="Record your lives in 4K" like="125" dislike="55">Go Pro Action Camera</Review>
-                    <Review desc="find a friend in google" like="265" dislike="51">Google Home 4</Review>
-                    <Review desc="take your drive off grid" like="250" dislike="15">Tesla Drive</Review>
+                    <Review desc="Cool gadget for creative people" like="25" dislike="5" noc="5">Samsung Note 9</Review>
+                    <Review desc="Record your lives in 4K" like="125" dislike="55" noc="15">>Go Pro Action Camera</Review>
+                    <Review desc="find a friend in google" like="265" dislike="51" noc="50">>Google Home 4</Review>
+                    <Review desc="take your drive off grid" like="250" dislike="15" noc="25">>Tesla Drive</Review>
                    </div>
 
     
